@@ -1,0 +1,18 @@
+.ipynb_checkpoints/
+.DS_Store
+*.pyc
+mdss/*.prof
+mdss.egg-info
+__pycache__
+.vscode
+mdss/build
+mdss/mdss
+*experiment*
+*file.py
+*.lprof
+*main*
+mdss/catboost_info
+examples/*csv
+*pkl
+*pqt
+*Adult Analysis*
