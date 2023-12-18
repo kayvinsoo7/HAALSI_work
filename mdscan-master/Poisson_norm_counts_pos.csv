@@ -1,0 +1,11 @@
+Penalty,No of literals,Subset,Size,Odds,Score
+0.5,3,age[44.0 - 60.0] AND triglycerides qc[0.46 - 5.34] AND waist circumference qc[950.0 - 1470.0],445,1.609,5.823
+1.0,2,cimt mean max[0.74 - 1.7] AND waist hip r c qc[0.9 - 1.16],227,1.923,5.357
+1.5,2,waist hip r c qc[0.9 - 1.16] AND cimt mean max[0.74 - 1.7],227,1.923,4.357
+2.0,2,waist hip r c qc[0.9 - 1.16] AND cimt mean max[0.74 - 1.7],227,1.923,3.357
+2.5,1,cimt mean max[0.74 - 1.7],434,1.502,2.642
+3.0,1,cimt mean max[0.74 - 1.7],434,1.502,2.142
+3.5,1,cimt mean max[0.74 - 1.7],434,1.502,1.642
+4.0,1,cimt mean max[0.74 - 1.7],434,1.502,1.142
+4.5,1,cimt mean max[0.74 - 1.7],434,1.502,0.642
+5.0,1,cimt mean max[0.74 - 1.7],434,1.502,0.142

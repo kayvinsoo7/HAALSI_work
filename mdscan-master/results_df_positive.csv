@@ -1,0 +1,11 @@
+Penalty,No of literals,Subset,Size,Odds,Score
+0.5,11,hdl qc[0.29 - 1.45] AND triglycerides qc[0.46 - 5.34] AND visceral fat qc[1.2 - 6.58 OR -999.0] AND subcutaneous fat qc[1.45 - 10.41 OR -999.0] AND waist hip r c qc[0.97 - 1.16] AND alcohol use status c qc[0 OR 1] AND bmi c qc[19.71 - 68.02] AND hiv final status c[0],41,15.142,24.884
+1.0,8,triglycerides qc[0.46 - 5.34] AND visceral fat qc[1.2 - 6.58 OR -999.0] AND subcutaneous fat qc[2.06 - 10.41 OR -999.0] AND waist hip r c qc[0.97 - 1.16] AND hiv final status c[0] AND hdl qc[0.29 - 1.45],44,13.167,20.539
+1.5,4,waist hip r c qc[0.94 - 1.16] AND bmi c qc[21.31 - 35.9] AND hiv final status c[0] AND age[47.0 - 60.0],163,4.384,17.825
+2.0,3,cimt mean max[0.78 - 1.7 OR -999.0] AND waist hip r c qc[1.0 - 1.16],48,9.448,15.702
+2.5,4,bmi c qc[21.31 - 35.9] AND age[47.0 - 60.0] AND hiv final status c[0] AND waist hip r c qc[0.94 - 1.16],163,4.384,13.825
+3.0,3,cimt mean max[0.78 - 1.7 OR -999.0] AND waist hip r c qc[1.0 - 1.16],48,9.448,12.702
+3.5,3,cimt mean max[0.78 - 1.7 OR -999.0] AND waist hip r c qc[1.0 - 1.16],48,9.448,11.202
+4.0,1,waist hip r c qc[1.0 - 1.16],130,3.78,10.356
+4.5,1,waist hip r c qc[1.0 - 1.16],130,3.78,9.856
+5.0,1,waist hip r c qc[1.0 - 1.16],130,3.78,9.356
