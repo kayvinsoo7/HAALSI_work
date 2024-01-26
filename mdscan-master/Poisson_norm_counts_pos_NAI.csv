@@ -1,0 +1,11 @@
+Penalty,No of literals,Subset,Size,Counts,IDR,Score,P value
+0.5,5,waist hip r c qc[0.85 - 9.02] AND age[48.0 - 60.0] AND sex[0.0] AND visceral fat qc[2.99 - 12.09] AND bmi c qc[25.77 - 62.8],226,217,0.116,36.287,4.278094775560074e-180
+1.0,7,bmi c qc[20.49 - 62.8] AND sex[0.0] AND triglycerides qc[0.73 - 11.8] AND visceral fat qc[3.49 - 12.09] AND waist hip r c qc[0.85 - 9.02] AND age[48.0 - 60.0] AND smoking status c qc[0.0],214,215,0.11,36.266,7.849272529268635e-188
+1.5,4,bmi c qc[18.95 - 62.8] AND sex[0.0] AND waist hip r c qc[0.87 - 9.02] AND age[48.0 - 60.0],280,257,0.144,34.453,2.2191758306180888e-167
+2.0,4,hdl qc[0.8 - 3.75] AND age[48.0 - 60.0] AND waist hip r c qc[0.87 - 9.02] AND sex[0.0],262,245,0.135,32.692,2.4350037392113427e-172
+2.5,3,sex[0.0] AND age[48.0 - 60.0] AND waist hip r c qc[0.87 - 9.02],289,260,0.149,31.05,1.715170888707703e-163
+3.0,3,waist hip r c qc[0.87 - 9.02] AND age[48.0 - 60.0] AND sex[0.0],289,260,0.149,29.55,1.715170888707703e-163
+3.5,3,age[48.0 - 60.0] AND waist hip r c qc[0.87 - 9.02] AND sex[0.0],289,260,0.149,28.05,1.715170888707703e-163
+4.0,2,age[50.0 - 60.0] AND waist hip r c qc[0.97 - 9.02],104,119,0.054,24.284,2.7740435373460812e-199
+4.5,2,age[50.0 - 60.0] AND waist hip r c qc[0.97 - 9.02],104,119,0.054,23.284,2.7740435373460812e-199
+5.0,2,age[50.0 - 60.0] AND waist hip r c qc[0.97 - 9.02],104,119,0.054,22.284,2.7740435373460812e-199

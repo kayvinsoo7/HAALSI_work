@@ -1,0 +1,11 @@
+Penalty,No of literals,Subset,Size,Counts,IDR,Score,P value
+0.5,6,triglycerides qc[0.25 - 1.12] AND visceral fat qc[-0.74 - 7.63] AND age[40.0 - 57.0] AND cholesterol 1 qc[0.3 - 4.15] AND bmi c qc[19.71 - 21.35] AND hiv final status c[1.0],36,0,,25.136,
+1.0,6,cimt mean max[0.41 - 0.83] AND bmi c qc[14.53 - 22.99] AND triglycerides qc[0.25 - 1.12] AND visceral fat qc[-0.74 - 7.63] AND age[40.0 - 58.0] AND cholesterol 1 qc[0.3 - 4.46],250,98,0.171,23.768,2.456498591752661e-63
+1.5,5,cimt mean max[0.41 - 0.68] AND friedewald ldl c c qc[-3.31 - 2.79] AND age[40.0 - 50.0] AND triglycerides qc[0.25 - 1.47] AND visceral fat qc[-0.74 - 8.64],333,140,0.227,25.956,1.6954146222487163e-61
+2.0,3,waist circumference qc[510.0 - 950.0] AND cholesterol 1 qc[0.3 - 4.46] AND cimt mean max[0.41 - 0.68],418,196,0.285,24.557,3.4108577653891837e-59
+2.5,3,cimt mean max[0.41 - 0.68] AND waist circumference qc[510.0 - 950.0] AND cholesterol 1 qc[0.3 - 4.46],418,196,0.285,23.057,3.4108577653891837e-59
+3.0,3,friedewald ldl c c qc[-3.31 - 2.79] AND waist circumference qc[510.0 - 950.0] AND cimt mean max[0.41 - 0.74],536,272,0.366,20.45,2.992593642428558e-50
+3.5,2,bmi c qc[14.53 - 26.06] AND age[40.0 - 53.0],467,246,0.319,14.935,1.6391550134944758e-59
+4.0,2,visceral fat qc[2.82 - 5.91] AND cimt mean max[0.41 - 0.74],439,225,0.3,15.171,2.3949870282811627e-61
+4.5,1,waist circumference qc[510.0 - 780.0],315,156,0.215,14.517,1.629635869560739e-72
+5.0,1,waist circumference qc[510.0 - 780.0],315,156,0.215,14.017,1.629635869560739e-72
