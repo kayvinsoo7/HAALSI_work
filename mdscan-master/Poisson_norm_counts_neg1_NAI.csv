@@ -1,0 +1,11 @@
+Penalty,No of literals,Subset,Size,Counts,IDR,Size (%),Count (%),P value
+0.5,9,age[40.0 - 54.0] AND cimt mean max[0.38 - 0.76] AND bmi c qc[18.95 - 25.77] AND highest level of education qc[1.0 OR 2.0] AND cholesterol 1 qc[0.55 - 5.7] AND visceral fat qc[1.48 - 5.74] AND alcohol use status c qc[0.0 OR 3.0],363,70,0.187,18.69,7.29,8.344116198750133e-42
+1.0,6,age[40.0 - 54.0] AND cimt mean max[0.38 - 0.72] AND bmi c qc[12.97 - 25.77] AND cholesterol 1 qc[0.55 - 5.7] AND alcohol use status c qc[0.0 OR 3.0],508,121,0.262,26.16,12.6,6.258378685357425e-44
+1.5,6,cimt mean max[0.38 - 0.72] AND cholesterol 1 qc[0.55 - 5.7] AND bmi c qc[12.97 - 25.77] AND alcohol use status c qc[0.0 OR 3.0] AND age[40.0 - 54.0],508,121,0.262,26.16,12.6,6.258378685357425e-44
+2.0,6,cimt mean max[0.38 - 0.72] AND cholesterol 1 qc[0.55 - 5.7] AND bmi c qc[12.97 - 25.77] AND alcohol use status c qc[0.0 OR 3.0] AND age[40.0 - 54.0],508,121,0.262,26.16,12.6,6.258378685357425e-44
+2.5,4,bmi c qc[12.97 - 25.77] AND hdl qc[0.18 - 1.85] AND cimt mean max[0.38 - 0.84] AND waist hip r c qc[0.65 - 0.94],842,255,0.434,43.36,26.56,1.8605737845375257e-32
+3.0,4,bmi c qc[18.95 - 27.49] AND hdl qc[0.18 - 1.85] AND visceral fat qc[1.48 - 5.24] AND age[40.0 - 48.0],401,90,0.206,20.65,9.38,1.899339655952229e-46
+3.5,3,bmi c qc[18.95 - 27.49] AND visceral fat qc[1.48 - 4.8] AND age[40.0 - 48.0],388,87,0.2,19.98,9.06,6.538859478153082e-47
+4.0,3,visceral fat qc[1.48 - 4.8] AND bmi c qc[18.95 - 27.49] AND age[40.0 - 48.0],388,87,0.2,19.98,9.06,6.538859478153082e-47
+4.5,3,visceral fat qc[1.48 - 4.8] AND bmi c qc[18.95 - 27.49] AND age[40.0 - 48.0],388,87,0.2,19.98,9.06,6.538859478153082e-47
+5.0,3,visceral fat qc[1.48 - 4.8] AND bmi c qc[18.95 - 27.49] AND age[40.0 - 48.0],388,87,0.2,19.98,9.06,6.538859478153082e-47
