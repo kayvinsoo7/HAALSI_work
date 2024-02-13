@@ -1,0 +1,55 @@
+Iteration,Penalty,SubsetRule,LiteralsNumber,Size,Odds,Score
+1,0.1,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,8.048
+1,0.2,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,7.648
+1,0.5,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.448
+1,0.6,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.048
+1,0.7,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.648
+1,0.8,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.248
+2,0.1,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,8.048
+2,0.2,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,7.648
+2,0.5,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.448
+2,0.6,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.048
+2,0.7,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.648
+2,0.8,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.248
+3,0.1,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,8.048
+3,0.2,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,7.648
+3,0.5,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.448
+3,0.6,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.048
+3,0.7,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.648
+3,0.8,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.248
+4,0.1,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,8.048
+4,0.2,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,7.648
+4,0.5,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.448
+4,0.6,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.048
+4,0.7,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.648
+4,0.8,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.248
+5,0.1,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,8.048
+5,0.2,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,7.648
+5,0.5,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.448
+5,0.6,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.048
+5,0.7,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.648
+5,0.8,waist circumference qc[510.0 - 780.0] AND mvpa cat c[1.0],2,259,0.0,15.765
+6,0.1,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,8.048
+6,0.2,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,7.648
+6,0.5,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.448
+6,0.6,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.048
+6,0.7,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.648
+6,0.8,waist circumference qc[510.0 - 780.0] AND mvpa cat c[1.0],2,259,0.0,15.765
+7,0.1,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,8.048
+7,0.2,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,7.648
+7,0.5,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.448
+7,0.6,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.048
+7,0.7,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,5.648
+7,0.8,waist circumference qc[510.0 - 780.0] AND mvpa cat c[1.0],2,259,0.0,15.765
+8,0.1,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,8.048
+8,0.2,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,7.648
+8,0.5,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.448
+8,0.6,visceral fat qc[2.82 - 12.4] AND hiv final status c[1.0] AND ses site quintile c qc[1.0 OR 3.0],4,126,0.0,6.048
+8,0.7,occupation qc[3.0 OR 4.0] AND visceral fat qc[2.82 - 7.63] AND cimt mean max[0.62 - 1.7] AND hiv final status c[1.0],5,220,0.066,7.527
+8,0.8,waist circumference qc[510.0 - 780.0] AND mvpa cat c[1.0],2,259,0.0,15.765
+9,0.1,friedewald ldl c c qc[-3.31 - 2.79] AND occupation qc[2.0 OR 3.0 OR 4.0] AND partnership status c qc[1.0 OR 2.0] AND bmi c qc[14.53 - 21.35],7,186,0.0,11.77
+9,0.2,friedewald ldl c c qc[-3.31 - 2.79] AND occupation qc[2.0 OR 3.0 OR 4.0] AND partnership status c qc[1.0 OR 2.0] AND bmi c qc[14.53 - 21.35],7,186,0.0,11.07
+9,0.5,friedewald ldl c c qc[-3.31 - 2.79] AND occupation qc[2.0 OR 3.0 OR 4.0] AND partnership status c qc[1.0 OR 2.0] AND bmi c qc[14.53 - 21.35],7,186,0.0,8.97
+9,0.6,friedewald ldl c c qc[-3.31 - 2.79] AND occupation qc[2.0 OR 3.0 OR 4.0] AND partnership status c qc[1.0 OR 2.0] AND bmi c qc[14.53 - 21.35],7,186,0.0,8.27
+9,0.7,friedewald ldl c c qc[-3.31 - 2.79] AND occupation qc[2.0 OR 3.0 OR 4.0] AND partnership status c qc[1.0 OR 2.0] AND bmi c qc[14.53 - 21.35],7,186,0.0,7.57
+9,0.8,waist circumference qc[510.0 - 780.0] AND mvpa cat c[1.0],2,259,0.0,15.765
