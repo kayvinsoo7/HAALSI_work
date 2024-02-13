@@ -1,11 +1,11 @@
 Penalty,No of literals,Subset,Size,Counts,IDR,Size (%),Count (%),P value
-0.5,8,partnership status c qc[1.0 OR 2.0] AND age[42.0 - 60.0] AND subcutaneous fat qc[1.28 - 10.41] AND cimt mean max[0.71 - 1.7] AND bmi c qc[21.35 - 68.02] AND triglycerides qc[0.46 - 5.34] AND waist hip r c qc[0.84 - 1.16],321,398,0.219,21.91,34.76,4.6794509365366095e-150
-1.0,4,age[42.0 - 60.0] AND waist hip r c qc[0.9 - 1.16] AND subcutaneous fat qc[0.99 - 10.41] AND cimt mean max[0.71 - 1.7],270,339,0.184,18.43,29.61,1.0426610616291128e-164
-1.5,4,age[42.0 - 60.0] AND waist hip r c qc[0.9 - 1.16] AND bmi c qc[21.35 - 68.02] AND cimt mean max[0.71 - 1.7],276,344,0.188,18.84,30.04,2.638902218471832e-162
-2.0,3,age[44.0 - 60.0] AND triglycerides qc[0.46 - 5.34] AND waist circumference qc[950.0 - 1470.0],445,500,0.304,30.38,43.67,1.8172618960168888e-109
-2.5,2,cimt mean max[0.74 - 1.7] AND waist hip r c qc[0.9 - 1.16],227,289,0.155,15.49,25.24,1.6795797446707973e-176
-3.0,2,cimt mean max[0.74 - 1.7] AND waist hip r c qc[0.9 - 1.16],227,289,0.155,15.49,25.24,1.6795797446707973e-176
-3.5,2,waist circumference qc[950.0 - 1470.0] AND age[47.0 - 60.0],420,470,0.287,28.67,41.05,3.9861410555331564e-115
-4.0,2,cimt mean max[0.74 - 1.7] AND waist hip r c qc[0.9 - 1.16],227,289,0.155,15.49,25.24,1.6795797446707973e-176
-4.5,2,waist circumference qc[950.0 - 1470.0] AND age[47.0 - 60.0],420,470,0.287,28.67,41.05,3.9861410555331564e-115
-5.0,2,waist circumference qc[950.0 - 1470.0] AND age[47.0 - 60.0],420,470,0.287,28.67,41.05,3.9861410555331564e-115
+0.5,8,partnership status c qc[1.0 OR 2.0] AND age[42.0 - 60.0] AND subcutaneous fat qc[1.28 - 10.41] AND cimt mean max[0.71 - 1.7] AND bmi c qc[21.35 - 68.02] AND triglycerides qc[0.46 - 5.34] AND waist hip r c qc[0.84 - 1.16],321,398,1.586,21.91,34.76,2.1838703007884433e-15
+1.0,4,age[42.0 - 60.0] AND waist hip r c qc[0.9 - 1.16] AND subcutaneous fat qc[0.99 - 10.41] AND cimt mean max[0.71 - 1.7],270,339,1.606,18.43,29.61,1.7691887263499453e-14
+1.5,4,age[42.0 - 60.0] AND waist hip r c qc[0.9 - 1.16] AND bmi c qc[21.35 - 68.02] AND cimt mean max[0.71 - 1.7],276,344,1.595,18.84,30.04,3.1893027447264836e-14
+2.0,3,age[44.0 - 60.0] AND triglycerides qc[0.46 - 5.34] AND waist circumference qc[950.0 - 1470.0],445,500,1.438,30.38,43.67,1.2734549425367245e-11
+2.5,2,cimt mean max[0.74 - 1.7] AND waist hip r c qc[0.9 - 1.16],227,289,1.629,15.49,25.24,1.2446041295545195e-13
+3.0,2,cimt mean max[0.74 - 1.7] AND waist hip r c qc[0.9 - 1.16],227,289,1.629,15.49,25.24,1.2446041295545195e-13
+3.5,2,waist circumference qc[950.0 - 1470.0] AND age[47.0 - 60.0],420,470,1.432,28.67,41.05,5.677399879741524e-11
+4.0,2,cimt mean max[0.74 - 1.7] AND waist hip r c qc[0.9 - 1.16],227,289,1.629,15.49,25.24,1.2446041295545195e-13
+4.5,2,waist circumference qc[950.0 - 1470.0] AND age[47.0 - 60.0],420,470,1.432,28.67,41.05,5.677399879741524e-11
+5.0,2,waist circumference qc[950.0 - 1470.0] AND age[47.0 - 60.0],420,470,1.432,28.67,41.05,5.677399879741524e-11
