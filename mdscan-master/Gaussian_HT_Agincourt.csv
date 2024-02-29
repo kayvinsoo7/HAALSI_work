@@ -1,11 +1,11 @@
 Penalty,No of literals,Subset,Size,Score,Subset HT rate (%),Prevalence ratio,P-value
-50,10,bmi c phase1[22.99 - 68.02] AND waist circumference phase1[810.0 - 1470.0 OR -999.0] AND waist hip r c phase1[0.8 - 1.16 OR -999.0] AND acr c phase1[0.3 - 387.04 OR -999.0] AND age phase1[42.0 - 60.0] AND triglycerides phase1[0.46 - 5.34 OR -999.0],664,22186.44,67.17,1.28,2.301384e-11
-100,10,age phase1[42.0 - 60.0] AND waist hip r c phase1[0.8 - 1.16 OR -999.0] AND acr c phase1[0.3 - 387.04 OR -999.0] AND triglycerides phase1[0.46 - 5.34 OR -999.0] AND bmi c phase1[22.99 - 68.02] AND waist circumference phase1[810.0 - 1470.0 OR -999.0],664,21686.44,67.17,1.28,2.301384e-11
-200,8,acr c phase1[0.3 - 387.04 OR -999.0] AND triglycerides phase1[0.46 - 5.34 OR -999.0] AND bmi c phase1[22.99 - 68.02] AND waist circumference phase1[810.0 - 1470.0] AND waist hip r c phase1[0.8 - 1.16] AND age phase1[42.0 - 60.0],662,20869.74,67.07,1.28,2.651370e-11
-300,8,age phase1[42.0 - 60.0] AND acr c phase1[0.3 - 387.04 OR -999.0] AND triglycerides phase1[0.46 - 5.34 OR -999.0] AND waist hip r c phase1[0.8 - 1.16] AND bmi c phase1[22.99 - 68.02] AND waist circumference phase1[810.0 - 1470.0],662,20069.74,67.07,1.28,2.651370e-11
-500,8,waist hip r c phase1[0.8 - 1.16] AND waist circumference phase1[810.0 - 1470.0] AND bmi c phase1[22.99 - 68.02] AND acr c phase1[0.3 - 387.04 OR -999.0] AND age phase1[42.0 - 60.0] AND triglycerides phase1[0.46 - 5.34 OR -999.0],662,18469.74,67.07,1.28,2.651370e-11
-600,6,waist hip r c phase1[0.8 - 1.16] AND waist circumference phase1[810.0 - 1470.0] AND bmi c phase1[22.99 - 68.02] AND age phase1[42.0 - 60.0] AND triglycerides phase1[0.46 - 5.34 OR -999.0],706,17765.27,66.57,1.27,3.929748e-10
-700,5,age phase1[42.0 - 60.0] AND bmi c phase1[26.04 - 68.02] AND triglycerides phase1[0.46 - 5.34 OR -999.0] AND waist hip r c phase1[0.8 - 1.16],550,17091.88,70.55,1.34,5.373482e-13
-1000,2,bmi c phase1[22.99 - 68.02] AND age phase1[47.0 - 60.0],683,14656.39,66.33,1.26,1.354970e-08
-1500,2,age phase1[42.0 - 60.0] AND bmi c phase1[26.04 - 68.02],624,14505.41,66.99,1.27,7.099516e-10
-2000,1,bmi c phase1[26.04 - 68.02],691,13990.41,63.82,1.21,2.840461e-08
+50,10,waist circumference phase1[810.0 - 1470.0 OR -999.0] AND bmi c phase1[22.98 - 68.02] AND acr c phase1[0.3 - 387.04 OR -999.0] AND age phase1[42.0 - 60.0] AND waist hip r c phase1[0.8 - 1.16 OR -999.0] AND triglycerides phase1[0.46 - 5.34 OR -999.0],680,24078.85,67.35,1.29,5.818913e-12
+100,10,waist circumference phase1[810.0 - 1470.0 OR -999.0] AND bmi c phase1[22.98 - 68.02] AND acr c phase1[0.3 - 387.04 OR -999.0] AND age phase1[42.0 - 60.0] AND waist hip r c phase1[0.8 - 1.16 OR -999.0] AND triglycerides phase1[0.46 - 5.34 OR -999.0],680,23578.85,67.35,1.29,5.818913e-12
+200,8,triglycerides phase1[0.46 - 5.34 OR -999.0] AND acr c phase1[0.3 - 387.04 OR -999.0] AND bmi c phase1[22.98 - 68.02] AND age phase1[42.0 - 60.0] AND waist circumference phase1[810.0 - 1470.0] AND waist hip r c phase1[0.8 - 1.16],678,22752.92,67.26,1.28,6.714254e-12
+300,8,acr c phase1[0.3 - 387.04 OR -999.0] AND age phase1[42.0 - 60.0] AND waist circumference phase1[810.0 - 1470.0] AND triglycerides phase1[0.46 - 5.34 OR -999.0] AND bmi c phase1[22.98 - 68.02] AND waist hip r c phase1[0.8 - 1.16],678,21952.92,67.26,1.28,6.714254e-12
+500,6,age phase1[42.0 - 60.0] AND waist hip r c phase1[0.8 - 1.16] AND triglycerides phase1[0.46 - 5.34 OR -999.0] AND bmi c phase1[22.98 - 68.02] AND waist circumference phase1[810.0 - 1470.0],724,20387.76,66.85,1.28,9.682264e-11
+600,6,age phase1[42.0 - 60.0] AND waist hip r c phase1[0.8 - 1.16] AND triglycerides phase1[0.46 - 5.34 OR -999.0] AND bmi c phase1[22.98 - 68.02] AND waist circumference phase1[810.0 - 1470.0],724,19787.76,66.85,1.28,9.682264e-11
+700,6,age phase1[42.0 - 60.0] AND waist hip r c phase1[0.8 - 1.16] AND triglycerides phase1[0.46 - 5.34 OR -999.0] AND bmi c phase1[22.98 - 68.02] AND waist circumference phase1[810.0 - 1470.0],724,19187.76,66.85,1.28,9.682264e-11
+1000,4,triglycerides phase1[0.46 - 5.34 OR -999.0] AND bmi c phase1[26.06 - 68.02] AND age phase1[42.0 - 60.0],598,17552.04,69.9,1.33,1.809311e-12
+1500,3,triglycerides phase1[0.46 - 5.34 OR -999.0] AND bmi c phase1[26.06 - 68.02],659,15837.59,66.77,1.27,1.009104e-10
+2000,1,bmi c phase1[26.06 - 68.02],709,15272.49,64.17,1.23,1.231888e-08
