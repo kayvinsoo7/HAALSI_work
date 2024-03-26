@@ -1,0 +1,7 @@
+Penalty,No of literals,Subset,Size,Counts,IDR,Size (%),Count (%),P value
+0.13,6,cholesterol 1 phase1[0.3 - 4.86] AND egfr c phase1[72.28 - 163.56] AND acr c phase1[0.11 - 1.0] AND age phase1[38.0 - 55.0] AND waist circumference phase1[510.0 - 1040.0] AND friedewald ldl c phase1[-3.31 - 2.83],440,174,0.501,31.54,15.8,2.4394275992036984e-17
+0.8,5,cholesterol 1 phase1[0.3 - 4.86] AND acr c phase1[0.11 - 1.0] AND age phase1[38.0 - 55.0] AND waist circumference phase1[510.0 - 1040.0] AND friedewald ldl c phase1[-3.31 - 2.83],458,185,0.512,32.83,16.8,3.456011469752871e-17
+1.0,4,waist circumference phase1[510.0 - 1040.0] AND friedewald ldl c phase1[-3.31 - 2.83] AND age phase1[38.0 - 55.0] AND acr c phase1[0.11 - 1.0],461,188,0.517,33.05,17.08,5.905693513744136e-17
+3.5,3,waist circumference phase1[510.0 - 1040.0] AND age phase1[38.0 - 53.0] AND acr c phase1[0.11 - 1.0],528,231,0.554,37.85,20.98,3.5587073899916045e-16
+8.5,2,acr c phase1[0.11 - 1.0] AND bmi c phase1[14.53 - 26.04],497,226,0.576,35.63,20.53,4.343263124888784e-14
+20.5,1,acr c phase1[0.11 - 1.0],985,594,0.764,70.61,53.95,1.2529279387892715e-07

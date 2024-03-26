@@ -1,0 +1,9 @@
+Penalty,No of literals,Subset,Size,Counts,IDR,Size (%),Count (%),P value
+0.3,7,cholesterol 1 phase1[0.3 - 4.86] AND egfr c phase1[72.28 - 163.56] AND diabetes history phase1[0 OR 2] AND age phase1[38.0 - 44.8] AND friedewald ldl c phase1[-3.31 - 2.83] AND triglycerides phase1[0.25 - 1.5],159,50,0.398,11.4,4.54,1.966464762601374e-10
+0.8,5,diabetes history phase1[0 OR 2] AND triglycerides phase1[0.25 - 1.5] AND age phase1[38.0 - 44.8] AND egfr c phase1[81.67 - 163.56],181,62,0.434,12.97,5.63,1.608137758184974e-10
+1.2,4,egfr c phase1[81.67 - 163.56] AND age phase1[38.0 - 44.8] AND diabetes history phase1[0] AND triglycerides phase1[0.25 - 1.5],179,62,0.439,12.83,5.63,2.7972003021750267e-10
+1.5,4,waist circumference phase1[510.0 - 950.0] AND egfr c phase1[87.98 - 163.56] AND age phase1[38.0 - 53.0] AND diabetes history phase1[0],374,173,0.586,26.81,15.71,6.449570112375428e-11
+3.5,3,bmi c phase1[14.53 - 26.04] AND age phase1[38.0 - 53.0] AND egfr c phase1[81.67 - 163.56],383,185,0.612,27.46,16.8,6.436067916266516e-10
+4.5,2,bmi c phase1[14.53 - 24.45] AND egfr c phase1[81.67 - 163.56],478,256,0.679,34.27,23.25,2.292273319644809e-08
+7.5,1,age phase1[38.0 - 47.0],446,255,0.724,31.97,23.16,3.5050779607772885e-06
+8.5,1,waist circumference phase1[510.0 - 780.0],300,151,0.638,21.51,13.71,2.1772589323979665e-07

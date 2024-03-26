@@ -1,0 +1,6 @@
+Penalty,No of literals,Subset,Size,Counts,IDR,Size (%),Count (%),P value
+0.3,7,age phase1[42.0 - 70.0] AND diabetes history phase1[0 OR 1 OR 2] AND acr c phase1[1.73 - 133.33] AND waist circumference phase1[780.0 - 1470.0] AND bmi c phase1[19.72 - 68.02],211,342,2.054,15.13,31.06,3.0868130046592953e-31
+0.8,4,bmi c phase1[19.72 - 68.02] AND age phase1[42.0 - 70.0] AND acr c phase1[1.73 - 133.33] AND waist circumference phase1[780.0 - 1470.0],214,344,2.037,15.34,31.24,1.0906750408491073e-30
+1.0,3,bmi c phase1[19.72 - 68.02] AND age phase1[42.0 - 70.0] AND acr c phase1[1.73 - 133.33],230,361,1.989,16.49,32.79,8.781039921928022e-30
+2.0,2,age phase1[42.0 - 70.0] AND acr c phase1[1.73 - 133.33],259,391,1.913,18.57,35.51,3.18116871975597e-28
+3.5,1,acr c phase1[1.73 - 133.33],279,408,1.853,20.0,37.06,1.9244006358408026e-26
