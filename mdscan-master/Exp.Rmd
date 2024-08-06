@@ -1,0 +1,352 @@
+---
+title: "Spatial Analysis"
+author: "Gabriel Kallah-Dagadu"
+date: "2024-07-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+### Exploratory spatial Analysis: 
+
+### Spatial data types and Spatial reference systems 
+
+*Definition*: Spatial data, also known as geospatial data, refers to information about the location and shape of, and relationships among, geographic features and boundaries on the Earth. 
+This data is often represented through coordinates (e.g., latitude and longitude) and topology and is used in various fields like geography, urban planning, environmental science, and more. 
+
+### Types of Spatial Data:
+1. Vector Data:
+
+- *Points*: Represent discrete locations, such as a city or a landmark.
+- *Lines (Polylines)*: Represent linear features, such as roads, rivers, or trails.
+- *Polygons*: Represent area features, such as lakes, parks, or property boundaries.
+
+2. Raster Data:
+
+- *Grids*: Represent data in a matrix of cells or pixels, commonly used for satellite images, aerial photographs, and digital elevation models (DEMs).
+- *Continuous Surfaces*: Represent phenomena that vary continuously over space, such as temperature or elevation.
+
+3. Attribute Data:
+
+- *Descriptive Information*: Non-spatial data associated with spatial features, such as the population of a city or the type of vegetation in a region.
+
+4. Network Data:
+
+- *Graph Structures*: Represent networks of interconnected nodes and edges, such as transportation or utility networks.
+
+5. Temporal Data:
+
+- *Time-Series Data*: Represents changes in spatial features over time, such as the movement of a vehicle or the spread of a disease.
+
+To generate spatial predictions using spatial predictive models for an area, two types of
+data are required: 
+(1) the `point data` (or point samples) of response and predictive variables,and 
+(2) the `grid data` of predictive variables with location information for the area where
+the predictions need to be produced. 
+
+Both data sets should have location information for spatial predictive modeling. Such location information needs to be geo-referenced and is
+often projected using various spatial reference systems for relevant purposes (Jiang & Li
+2014).
+
+### Point data of response and predictive variables
+
+We use two point data sets `petrel` and `sponge` in the `spm` package as examples.
+```{r}
+library(spm)
+data(petrel)
+class(petrel)
+head(petrel)
+```
+```{r}
+data(sponge)
+class(sponge)
+head(sponge)
+```
+
+The samples are point data and stored together with their associated location information.
+The location information in the `petrel` data set is _longitude_ and _latitude_, while the location
+information in the `sponge` data set is _easting_ and _northing_.
+
+### Grid data of predictive variables with location information
+
+We use two grid data sets, `petrel.grid` and `sponge.grid`, in the `spm` package as examples.
+
+```{r}
+data(petrel.grid)
+class(petrel.grid)
+head(petrel.grid)
+```
+
+```{r}
+data(sponge.grid)
+class(sponge.grid)
+head(sponge.grid)
+```
+The examples show that location information in the `petrel.grid` data set is _longitude_ and _latitude_, while the location information in the `sponge.grid` data set is _easting_ and _northing_.
+
+The spatial reference system for the location information can be changed when required as demonstrated below.
+
+### Spatial reference systems
+There are many spatial reference systems or coordinate reference systems. The spatial references are in a number of formats that can be found at Spatial Reference [https://spatialreference.org/]. For spatial
+predictive modeling, the spatial information or location information is often stored using `WGS84` or `utm zones`. For example, the spatial information for data sets `petrel` and `petrel.grid` in the `spm` package are stored in `WGS84`, while the spatial information in the `sponge` and
+`sponge.grid` data sets in the `spm` package is projected in `utm zone 52` south. 
+Sometimes, we may need to reproject the location information from one spatial reference system to another one.
+
+Here we use the `sponge` and `petrel.grid` data sets to demonstrate how to reproject the location information using the function `spTransform` in the `rgdal` package (Bivand, Keitt, & Rowlingson 2019; Pebesma & Bivand, 2020) and the function `st_transform` in the `sf` package (Pebesma 2018).
+
+1. *Reprojection of point data from `utm zones` to `WGS84`*
+
+The spatial information, _easting_ and _northing_, in the `sponge` data set is stored in `utm zone 52` south. Since the `sponge` data set is in dataframe format, it needs to be converted to `SpatialPoints` format with its associated coordinate reference system prior to reprojecting.
+
+```{r}
+library(sp)
+library(raster)
+library(rgdal)# install it manually 
+library(sf)
+library(terra)
+spng <- sponge # we create a copy of the sponge data for future reuse
+head(spng)
+```
+
+```{r}
+coordinates(spng) = ~ easting + northing # set spatial coordinates to create SpatialPoints data
+proj4string(spng) <- CRS("+proj=utm +zone=52 +south + units=m +no_defs + ellps = WGS84 + towgs84 =0,0,0") # coordinate reference system arguments converting the data to SpatialPoints format 
+class(spng)
+```
+
+Now the *spng* data set can be *reprojected* from _easting_ and _northing_ in `utm zone 52 south`to _longitude_ and _latitude_ in `WGS84` using `spTransform`.
+
+```{r, warning=FALSE}
+spng.wgs84 <- spTransform(spng , CRS("+proj=longlat +datum=WGS84 +no_defs +ellps=WGS84 +towgs84=0,0,0"))
+class(spng.wgs84)
+```
+```{r}
+spng.wgs84 <- as.data.frame(spng.wgs84)# storing `spng.wgs84` as a dataframe.
+```
+
+```{r}
+head(spng.wgs84)
+```
+```{r}
+names(spng.wgs84) <- c("sponge", "tpi3", "var7", "entro7", "bs34", "bs11", "longitude","latitude" )
+head(spng.wgs84)
+```
+
+
+Alternatively, the spng data set can be reprojected from _easting_ and _northing_ in utm `zone 52 south` to _longitude_ and _latitude_ in `WGS84` using `st_transform` as shown below.
+
+```{r}
+library(sf)
+spng2 <- st_as_sf(sponge , coords=c("easting", "northing"))
+st_crs(spng2) <- 32752
+# crs(spng2)
+spng.wgs84.2 <- st_transform(spng2 , st_crs(4326))
+class(spng.wgs84.2)
+```
+For spatial predictive modelling, coordinate information may be used as predictive variable(s). Thus `spng.wgs84.2` needs to be converted into a dataframe format as follows.
+
+```{r}
+spng.wgs84.3 <- cbind((st_coordinates(spng.wgs84.2)), st_set_geometry(spng.wgs84.2, NULL))
+class(spng.wgs84.3)
+head(spng.wgs84.3)
+```
+2. *Reprojection of grid data from `WGS84` to `utm`*
+
+The spatial information, longitude and latitude, in `petrel.grid` is stored in `WGS84`. Prior to
+reprojecting, the `petrel.grid` data set that is in dataframe format needs to be converted to `SpatialPoints` format with its associated coordinate reference system.
+
+We reassign the dataframe `petrel.grid` to a different object `pg` that will be reformatted to SpatialPoints data.
+
+```{r}
+pg <- petrel.grid
+head(pg)
+```
+
+```{r}
+coordinates(pg) = ~ long + lat # set to create SpatialPoints data
+proj4string(pg) <- CRS("+proj=longlat + datum = WGS84 + no_defs + ellps = WGS84 + towgs84 = 0,0,0") # assign coordinate reference system
+class(pg)
+```
+Now the `pg` data set can be reprojected from _longitude_ and _latitude_ in `WGS84` to _easting_ and _northing_ in `utm zone 52` south.
+```{r}
+pg.utm52s <- spTransform(pg, CRS("+proj=utm +zone=52 +south +units=m +no_defs + ellps=WGS84 +towgs84=0,0,0"))
+class(pg.utm52s)
+```
+```{r}
+pg.utm52s.2 <- as.data.frame(pg.utm52s)
+names(pg.utm52s.2) <- c("bathy", "dist", "relief", "slope", "easting", "northing")
+head(pg.utm52s.2)
+```
+
+## Predictive variables
+Spatial predictive modelling is used in various disciplines, and predictive variables used for modeling may change with relevant disciplines. Some predictive variables used for spatial predictive modelling in terrestrial and marine environmental sciences are as follows: 
+
+1. *Location data*
+Location data refer to the coordinates of point samples and grid data. It is usually presented in longitude and latitude in WGS84 or easting and northing in utm.
+
+2. *Climatic variables*
+Climatic variables may include temperature, precipitation, wind speed, and various derived variables (e.g., humidity, seasonality).
+
+3. *Topographical variables*
+Topographical variables may include elevation, slope, aspect, distance-to-sea, and relevantderived variables such as topographic position index.
+
+4. *Optical remote sensing data*
+Optical remote sensing data may include various reflectance bands and relevant derived variables (e.g., NDVI, EVI).
+
+5. *Vegetation information*
+Vegetation information may include variables like vegetation types, abundance, and coverage.
+
+6. *Substrate data*
+Substrate data may include soil type, soil nutrients, organic matter, and soil moisture.
+
+7. *Disturbance information*
+Disturbance information may include grazing, fertilization, burning, and so on.
+
+8. *Oceanographic variables*
+Oceanographic variables may include sea surface temperature, light availability, current velocity, suspended particulate matter, sea surface primary production, salinity, oxygen concentration, and bottom sheer stress.
+
+## Exploratory analysis
+Exploratory analysis for spatial predictive modelling may change with the predictive methods used. According to Li (2019a), the methods can be classified into three groups: 
+(1) non-machine learning methods, 
+(2) machine learning methods, and 
+(3) hybrid methods. 
+
+### Exploratory analysis for non-machine learning methods
+For non-machine learning methods, such as Generalized Linear Models (GLM), exploratory analysis is often used to detect the relationships between response variable and predictive variables. By applying such analysis, one intends to find data nature and structure and then certain actions can be taken to deal with relevant samples or variables.
+Such exploratory analysis is also used to identify various issues relating to data nature and structure for spatial predictive modeling. 
+The following examples are for how to identify and deal with some of these issues.
+
+1. *Outliers*
+An _outlier_ is an observed value that lies at an abnormal distance from other sample values in a random sample. Outliers are usually determined by plotting relevant variables (e.g.,
+scatter plots, box plots)
+
+```{r, warning=FALSE}
+hbee1 <-read.csv("bee1sub.csv", sep = ",", header = T)
+hbee <- hbee1$hbee
+boxplot(hbee , xlab = "Number of honey bees", horizontal = T)
+```
+
+These outliers identified could be excluded from further modeling and analysis.
+Although identification of outliers is important for predictive modelling, the outliers identified may be caused by certain conditions (e.g., an optimal environmental condition).
+Thus they could be false outliers as shown in Figure below in plot of observed values aganist fitted values, after fitting a glmmPQL model below.
+
+
+```{r, warning=FALSE}
+library(MASS)
+glmmpql1 <- glmmPQL(hbee ~ inf + c500 + I(inf^2) + I(links300 ^2) + inf:I(links300^2), random = ~1|paddock/plot , data = hbee1 , family = quasi(var = "mu^2", link
+= "log"), maxit = 1000)
+
+#par(font.axis = 2, font.lab = 2, las = 1)
+plot(hbee , predict(glmmpql1 , type = "response"), xlab = "Observed values", ylab =
+"Fitted values")
+lines(hbee , hbee)
+```
+
+Outliers may also change with predictive models developed, that is, a false outlier could
+also be produced by a sub-optimal model.
+
+```{r}
+glmmpql2 <- glmmPQL(hbee ~ inf + c500 + w2000 + w300 + I(inf^2) + I(c500^2) + I(w2000^2) + I(w300^2) + inf:w2000 + inf:w300 + c500:w2000 + c500:w300 + I(inf^2):w2000 + I(inf^2):w300 , data = hbee1 , random = ~ 1|paddock/plot , family = quasi(link = log , var = mu^2), maxit = 1000)
+```
+
+```{r, warning=FALSE}
+plot(hbee , predict(glmmpql2 , type = "response"), xlab = "Observed values", ylab =
+"Fitted values")
+lines(hbee , hbee)
+```
+It is obvious that the observation with the maximal bee count number becomes an outlier.
+Therefore, caution should be taken in dealing with outliers.
+
+2. *Homogeneity of variance*
+Variance of response variable (or depended variable) can be either homogeneity (homoscedasticity) or heterogeneity (heteroscedasticity). For spatial predictive modelling using regression methods (e.g., GLM), we need to consider the variance of response variable in relation with its mean.
+
+Consider this example with hbee1 data set.
+
+```{r, warning=FALSE}
+mu <- with(hbee1 , tapply(hbee , list(paddock , obs), mean))
+vars <- with(hbee1 , tapply(hbee , list(paddock , obs), var))
+
+plot(mu, vars)
+plot(mu, sqrt(vars))
+```
+When variance is heterogeneous, relevant data transformation should be taken, or methods that can cope with variance heterogeneity should be used.
+
+3. *Data distribution*
+For spatial predictive modelling, response variables can be in any data types, including continuous numerical data, count data, percentage data, binary data, or even categorical data. Data distribution of response variable changes with data types. Even for the same data type the distribution may also change. For geostatistical methods (e.g., OK, KED) and linear models (LM), data are assumed to be normally distributed.
+Data normality of response variables needs to be examined prior to modeling. If data are non-normal, then data transformation is required or predictive methods that can deal with non-normality should be used. Data normality can be examined using methods such as QQ plots or histgram of the response variable and its various transformed data.
+
+Let consider _gravel_ variable in the petrel data set in the `spm` package.
+
+```{r, warning=FALSE}
+library(spm)
+gravel <- petrel$gravel
+qqnorm(gravel , main = NULL)
+qqline(gravel)
+```
+
+```{r, warning=FALSE}
+hist(gravel , breaks=c(seq(0, 100, 5)), main = NULL)
+hist(sqrt(gravel), main = NULL)
+hist(log(gravel+1), main = NULL)
+hist(asin(sqrt(gravel/100)), main = NULL)
+```
+
+It is obvious that the data are non-normal, and the log transformation is better than other transformations considered.
+Data transformation can also be chosen based on its effect on predictive accuracy using cross-validation functions.
+
+4. *Collinearity*
+Collinearity is the correlations among predictive (independent) variables. It is usually determined based on _variance inflation factor_ (VIF) or correlation coefficient (r).
+
+Let consider an example using the `sponge` data set in the `spm` package.
+
+```{r}
+library(spm)
+library(dplyr)
+data(sponge)
+sponge6<-sponge%>%select(c(sponge, tpi3, var7, entro7, bs34, bs11) )
+cor1 <- round(cor(sponge6, method = "pearson"), 2)
+cor1
+```
+
+5. *Response curve of response variable to predictive variables*
+Relationships of response variable and predictive variables need to be considered to determine the response curves of response variable to predictive variables. The relationships can be visualized by plotting response variable against predictive variables using the lowess function in the stats package. The `sponge` data set in the `spm` package would be is used as an example.
+
+```{r, warning=FALSE}
+library(spm)
+data(sponge)
+s1 <- sponge[, c(1, 2, 4:8, 3)]
+for (i in 1:7) {
+plot(s1[, i], s1[, 8], xlab = names(s1)[i], ylab = "Species number")
+lines(lowess(s1[, 8] ~ s1[, i]), col = "blue")
+}
+```
+
+It is apparent that for some predictors (e.g., northing and tpi3), response curves are not linear. If a non-linear relationship is detected, relevant predictive variable may need to be specified to its second or third orders in a predictive model to capture the non-linear relationship, or a method that can automatically handle the non-linear relationship should be used (e.g., RF).
+
+6. *Correlations between response variable and predictive variables*
+The relationships between response variable and predictive variables are usually determined based on correlation coefficient (r). When the correlation of a predictive variable with the response variable is low, the common practice is to remove such predictive variable prior to model development. However, it would be wise to let the variable selection process determine which variables should be removed because some variables may be important predictive variables even with low correlation coefficients. That is, such correlation analysis is only indicative because it is based on the raw data instead of residuals; and the correlations based on the raw data are not necessarily the same as those based on the residuals.
+
+7. *Other issues*
+There are still some other issues that are usually considered in modelling. They may include: 
+(1) random errors, 
+(2) spatial independence of response variable, and 
+(3) temporal independence of response variable. 
+
+For spatial predictive modelling, issues like sources of
+random errors can be directly considered as predictive variables in the predictive modelling work. If spatial independence exists, geostatistical methods should be used, or relevant spatial information can be considered directly as predictive variables. If temporal changes exist, relevant temporal variable(s) should be considered or methods that can deal with spatio-temporal data should be used.
+
+### Exploratory analysis for machine learning methods
+
+For machine learning methods, exploratory analysis is useful for modelers to understand the data, thus providing some useful information to interpret the modeling results. 
+However, some of above functions of exploratory analysis for modern statistical methods are no longer required for certain machine learning methods. This is because some machine learning methods, such as Random Forest (RF), are free of assumptions on data distribution and can handle non-linear relationship and interactive effects. They can also handle highly correlated predictive variables predictors. 
+Furthermore, highly correlated predictors are encouraged to be used for RF because they might make meaningful contributions to improving the accuracy of predictive models.
+
+### Exploratory analysis for hybrid methods
+For hybrid methods, some roles of exploratory analysis can be as useful as for the aforementioned methods. This is because if kriging methods are applied to the residuals of a detrending method (e.g., GLM, RF), the residuals are assumed to be normal. 
+Thus the residuals need to be analyzed to check if relevant assumptions are satisfied. If not satisfied, the residuals need to be transformed for the hybrid methods. Again, the transformation of residuals can be determined according to its effect on predictive accuracy using relevant cross-validations.
+
+
+
+
+
