@@ -1,8 +1,6 @@
-Great! Now that I’ve reviewed the full PDF including the results, figures, tables, and discussion, I’ll revise and finalize your **Results Section Slides** based on the actual document structure and data visuals. Here's a slide-by-slide breakdown that maintains clarity, data depth, and aligns tightly with your narrative:
+# NEW
 
----
-
-### 🎯 **Slide 1: Study Population Overview**
+## 🎯 **Slide 1: Study Population Overview**
 
 **Title:** *Baseline Characteristics and Sample Overview*
 
@@ -22,7 +20,7 @@ Great! Now that I’ve reviewed the full PDF including the results, figures, tab
 
 ---
 
-### 📊 **Slide 2: Binary Classification Results**
+## 📊 **Slide 2: Binary Classification Results**
 
 **Title:** *Binary Outcome Modeling & Performance Metrics*
 
@@ -38,7 +36,7 @@ Great! Now that I’ve reviewed the full PDF including the results, figures, tab
 
 ---
 
-### 🔄 **Slide 3: Motivation for Target Redefinition**
+## 🔄 **Slide 3: Motivation for Target Redefinition**
 
 **Title:** *Identifying Pre-diabetes: Why Binary Was Insufficient*
 
@@ -58,7 +56,7 @@ Great! Now that I’ve reviewed the full PDF including the results, figures, tab
 
 ---
 
-### ⚖️ **Slide 4: Multiclass Model Evaluation**
+## ⚖️ **Slide 4: Multiclass Model Evaluation**
 
 **Title:** *Improved Precision with Multiclass Approach*
 
@@ -71,7 +69,7 @@ Great! Now that I’ve reviewed the full PDF including the results, figures, tab
 
 ---
 
-### 🧬 **Slide 5: Feature Comparison Across Classes**
+## 🧬 **Slide 5: Feature Comparison Across Classes**
 
 **Title:** *Baseline Variable Differences (3-Class Comparison)*
 
@@ -88,7 +86,7 @@ Great! Now that I’ve reviewed the full PDF including the results, figures, tab
 
 ---
 
-### 💡 **Slide 6: SHAP-Based Model Interpretation**
+## 💡 **Slide 6: SHAP-Based Model Interpretation**
 
 **Title:** *SHAP Explainability of XGBoost Predictions*
 
@@ -109,7 +107,7 @@ Great! Now that I’ve reviewed the full PDF including the results, figures, tab
 
 ---
 
-### ✅ **Slide 7: Summary of Results**
+## ✅ **Slide 7: Summary of Results**
 
 **Title:** *Key Takeaways*
 
@@ -150,18 +148,18 @@ Each plot answers:
 
 ## 🧠 **How to Read Each Plot**
 
-### X-Axis:
+### X-Axis
 
 * **SHAP value**: Impact of that feature on the prediction for this specific class.
 
   * **Positive SHAP** → pushes prediction **toward** that class.
   * **Negative SHAP** → pushes prediction **away from** that class.
 
-### Y-Axis:
+### Y-Axis
 
 * Features (ordered by average importance for this class)
 
-### Color:
+### Color
 
 * **Red = high actual value**
 * **Blue = low actual value**
